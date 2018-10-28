@@ -1,0 +1,189 @@
+\chapter{Gambling Theory}
+
+% Last updated: 20181012
+
+This chapter covers some statistical ideas from gambling in general that 
+are worth knowing.
+
+\section{Expected Value}
+
+The Expected Value (``EV'') of a bet is how much you expect to win or lose
+each time you make that bet. It's calculated as the probability of
+winning times amount won, minus the probability of losing times amount
+lost. Probability in Maths is a fraction between 0 (no chance)
+and 1 (certain). A lot of the probabilties we will see in Poker
+are expressed as percentages, it is trivial to turn these into a number
+between 0 and 1. 50\% is 0.5, 18\% is 0.18 and so on.
+
+Consider flipping a coin against your friend
+for \$5. Half the time you win and make \$5. The other half of the
+time you lose and lose \$5. You multiply the probability of winning
+by how much you'll win, and subtract the probability of losing times
+how much you'll lose.
+
+The EV of the \$5 cointoss is (0.5 x \$5) - (0.5 x \$5) 
+= \$2.50 - \$2.50 = 0. A bet with an expected value of 0 is 
+paying true odds. A bet with an expected value less than 0 is
+paying under the odds, and a bet with an expected value more than
+0 is paying over the odds. Under the odds bets are said to be
+``negative expectation'' and are written -EV (pronounced ``minus Eee Vee'').
+Over the odds bets are ``positive expectation'' and are written +EV. 
+(``plus Eee Vee''). True odds bets are called ``zero expectation'' 
+though you don't see that terminology often.
+
+\subsection*{Sports Bets}
+Sports bets pay under the odds because the betting agency take out a percentage
+of the pool as their profit for running the game. A football bet market 
+(Rugby League, Rugby Union or AFL) gives 6.5 points start 
+to one team and have both teams paying \$1.92. If two people each bet \$100 on
+different sides in this game, one wins and the other loses. One 
+player gets \$192, winning \$92 and the other player lost \$100. The 
+betting agency held \$200 on the game and kept \$8 of it, paying
+the \$192 out to the winning player. If they can balance the bets, 
+they win no matter what.
+
+This is a house cut of 4\%, because \$8 is 4\% of the \$200 the bookmaker
+held on the game. In the bad old days
+the TAB paid \$1.85 on even money bets, keeping a sizeable 7.5\% for
+themselves. They've improved with greater competition and now pay \$1.87 to \$1.90 for
+even money bets. Online betting sites pay even more and can pay
+\$1.92 or more for 50-50 bets.
+
+% FIXME: check the numbers for even money sports bets these days
+
+Notice the winning bettor at \$1.92 wins slightly less than his stake,
+on a footy game considered a 50-50 chance. If he makes 10 of these
+bets over time and wins five and loses five, he's not even. He's lost
+\$500 on his losing bets and won \$92 x 5 = \$460 on his winning bets.
+Overall he's down \$40- that \$40 hasn't been paid to winning players,
+it's the house cut that the betting site takes for running the game.
+He's effectively paying \$4 on every \$100 he bets, win or lose.
+
+The amount of money a casino or betting site keeps for running the
+game is called the ``rake'', the ``house cut'' (or even the ``vig'',
+short for ``vigorish'', a word you won't hear used very often). 
+In Poker tournaments you normally pay a rake of 10\%, with the rest of  
+your buyin going into the prize pool.
+
+Consider Roulette, ``pick the exact number'' bet. I'm in a casino,
+I don't want to play too big but I'll try a number at Roulette for a few
+spins, betting \$10 each time. If a different number comes up I lost \$10,
+if I score the right number I get \$360 back, winning \$350. There's one
+zero on the table and the numbers 1 to 36, so I have a 1 in 37 chance of
+winning.
+
+EV = Probability of winning x (amount won) - Probability of losing x (amount lost) \\
+   = (1/37) x \$350 - (36/37) x \$10 \\
+   = (350/37 - 360/37)  \\
+   = \$9.46 - \$9.73 \\
+   = -\$0.27
+
+Every \$10 bet at roulette I expect to cost me 27 cents. This is a 2.7\% house
+edge- they are paying under the true odds of picking the right number.
+
+% We'll be using exactly the same Expected Value calculation in poker. In
+% those calculations the amount won will usually be the pot we are calling a bet
+% into and the amount lost will usually be the amount we have to call.
+
+EV is a hard concept to understand at first, because when you actually
+play, you'll find that every bet at Roulette costs you \$10, not
+27 cents. You can't sit dressed up at a Roulette Table and sip free
+drinks and have 10 shots at picking the right number and walk out \$2.70
+down. You walk out \$100 down. But if you play thousands and thousands
+of spins, and get your fair share of wins, every \$10 spin (including 
+the winning spins) costs you 27 cents. 
+
+This 2.7\% is the house edge, and it works on every spin. These little 2.7\%
+edges add up over time and over spins and they pay for the staff, the
+security, the equipment and the nice casino profits. They pay for the
+subsidised meals at the cafe and the lucky member's draw. That plus
+all the Poker Machines.
+
+In a typical spin on a roulette table there could be a few thousand dollars
+spread across the numbers. The casino's making 2.7\% on the exact number
+bets and various other percentages on all the other kinds of Roulette Bets, 
+some of which have exotic names like ``Manque''.
+
+Run a few spins in an hour, sit back and watch the money roll in.
+
+\section{Variance}
+
+In gambling you win or lose on a single outcome of an event,
+not the long term EV. The short term luck of a single outcome
+is what counts.
+
+Online poker players talk about results over thousands of hands. Because the
+dealing online is fast and flawless, and because they can play at
+more than one table at once, active online players can rack up
+20,000 hands of poker a month. At these volumes they expects their
+results to be pretty close to the EV of their bets.
+
+Variance is the difference between the short term result and the
+expected long term outcome.
+
+Imagine a rich deluded friend of mine is convinced \nineh\nined\ is a better
+starting hand in Holdem than \Jc\Js\ . ``Black Jacks never win'' he grumbles
+``and red nines always hits their set''. He wants to play me one hand, he
+gets the \nineh\nined\ and I get the \Jc\Js\, we shuffle and deal out a flop,
+turn and river and we both put \$1,000 into the pot and the best
+poker hand at the end gets the full \$2,000.
+
+Would I play him? No. I'm not comfortable playing one hand of poker
+for \$1,000, even as an 80\% favourite. There's still a chance he can get 
+lucky on just this one hand. 
+
+My rich friend won't let me go, so I make him a counter offer.
+``Let's play it this way. We'll play for \$10 each per pot, and do
+it 100 times. You have the red nines and I'll have the black Jacks.''
+
+Now this is a game I'll play for \$1,000. What I'm doing here is smoothing
+out the variance of one single hand, by playing a smaller bet over
+100 hands. Anyone can beat \Jc\Js\ with \nineh\nined\ in the course of one 
+hand. Nobody can do it often enough over 100 hands. Laws of mathematics 
+catch you.
+
+Played over 100 hands I now expect to make close to \$600. 80 times I'll
+make \$10, 20 times I'll lose \$10. I should end up \$540 to \$660 ahead
+at the end of the 100 hands.
+
+Let's look at the EV:
+EV = (Probability of winning) x amount won - (Probability of losing) x amount lost \\
+   = (80/100) x \$10 - (20/100) x \$10 \\
+   = \$8 - \$2 \\
+   = \$6.
+
+Every time we play this \$10 JJ versus 99 game, I expect to win \$6. That's a 
+massive 60\% on my investment, more than 20 times the 2.7\% casino makes on
+pick the number in roulette. I just sit back and let the money roll in.
+
+But I didn't want to play this game for one \$1,000 hand, because then
+I'm at the mercy of short term blind luck. Likewise the casino won't
+want to play against James Bond turning up and plonking \$10 million
+on number 23 in Roulette. They protect themselves against variance
+with table maximums, and they encourage a group of people to be playing,
+which leads to a fairly even spread of bets across the numbers, limiting
+their exposure to any particular single outcome. With a roughly even spread
+of money on a roulette wheel, the casino makes money no matter what
+number comes up.
+
+Besides, 007's a poker player these days. Best in the Service.
+He busted Le Chiffre, Felix Leiter, the giant African guy and
+the sneaky Japanese guy in the big game in ``Casino Royale''.
+
+You can do EV calculations on all kinds of bets in casino games.
+Strangely enough, the house has the edge every time. Some bets
+are quite fair but some (e.g pick one number in Club Keno 
+where 20 numbers are drawn out of 80 and they pay
+3 to 1 on a 4 to 1 chance) are daylight robbery! Michael Konik
+in his book ``The Man with the \$100,000 breasts'' is very entertaining on the
+different house edges in various casino games. The dice game ``craps''
+(hugely popular in America but not in Australia) is said to be
+the fairest Casino game with the smallest house edges.
+
+When sizing your bets in No Limit Holdem, you get to decide how much
+the chasing player will be paid. He might have a 1 in 5 chance
+but you've sized your bet so that the pot is only paying him 3 to 1 
+if he wins. In this way you get to act like a casino, with the edge
+on your side. The pot will still be decided on the short term luck
+of a single outcome, but you have the edge.
+
