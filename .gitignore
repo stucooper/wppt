@@ -1,0 +1,8 @@
+*.aux
+*.dvi
+*.eps
+*.log
+*.pdf
+poker.sty
+*.toc
+
