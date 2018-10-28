@@ -1,0 +1,124 @@
+\chapter{Odds and Outs}
+
+% Last updated: 20181012
+
+Now that you've seen how expected value works, let's look at how it
+works in Holdem. There's a bit of Maths in this chapter but nothing you
+didn't learn at school, just some multiplication, division and a
+few percentages.
+
+\section{Percentages}
+
+If your chance of winning the hand is greater than 50\%, you're the favourite.
+If your chance is 80\%, you'll win the hand 4 times out of 5. If your chance
+is 20\%, you'll win 1 time out of 5.
+
+If you've watched some poker on the Internet, you'll see winning percentages
+written next to each player's hand. When you're playing the game yourself you
+don't know the other players' cards, but you can take a good shot at estimating
+your own chances of winning.
+
+\section{Outs}
+
+A card that improves your hand to a better hand is called an out. I have \fourd\tred\ and
+I call a raise from the big blind, two of us take the flop. The big blind has \As\Js. 
+The flop comes \Ad\tens\eigd. My four high won't win anything, but I can improve to a flush 
+if a diamond comes on the turn or the river. There's 13 diamonds in the deck of cards, I've 
+seen 4 of them, there's 9 remaining. I have 9 outs after the flop to improve to a flush.
+
+Now the turn comes \twoc\, giving a board of \Ad\tens\eigd\twoc. I didn't make my flush
+yet, but I've picked up a chance at a straight. If a 5 comes on the river I'll make the
+best hand. There's four fives in the deck, so I now have 9 flush outs + 4 straight outs,
+which looks like 13 winning cards for me. But one of my flush outs is the 5 of diamonds,
+and I can't count the 5 of diamonds twice. So I have 9 flush outs + 3 extra straight outs
+= 12 outs after the turn. 
+
+% FIXME: list all the outs
+
+Now see what happens when I have the same cards and the same flop and turn, but this
+time the big blind has \As\Ah. On the flop of \Ad\tens\eigd\, the \tend\ isn't a winning
+card for me anymore, it makes my flush but it makes the big blind a full house and I'm
+drawing dead and no river card saves me. When the turn comes \twoc\, the board is now
+\Ad\tens\eigd\twoc\ and the \twod\ isn't an out for me, again it will make the
+big blind a full house. So this time I have 8 outs after the flop and 7 flush outs +
+3 straight outs = 10 outs after the turn.
+
+Notice in counting my outs I'm assuming all the diamonds and all the fives are still in
+the deck. In reality this isn't the case, some of the players who folded preflop would
+have folded a diamond and maybe there's a diamond or a five as one of the burn cards.
+It doesn't change the maths much so you can usually ignore this. One time this does
+count is when you're in a big pot with three or more players, often there can be
+two players on flush draws and that means that you're less chance of making your flush
+and even if you do make a flush you lose to a third guy's higher flush.
+
+\section{Rule of Four, Rule of Two}
+
+If you're on a draw, you can find your winning percentages by counting your outs and
+using the Rule of Four or Rule of Two. After the flop, your percentage chance
+of improving your hand is your number of outs times 4 (Rule of Four). After the turn, your
+percentage change of improving your hand is your number of outs times 2 (Rule of Two).
+
+So going back to my \fourd\tred\ against \As\Js\, when I flop the flush draw
+I have 9 outs and my chance of improving to a flush by the river is 9 x 4 = 36\%, about
+1 in 3. After the turn, I have 12 outs to a flush or a straight and now my
+chances of improving are 12 x 2 = 24\%, about 1 in 4. Even though I've picked up
+three more outs by the turn, my percentage has gone down because now
+there's just one more card to come.
+
+The Rule of Four and Rule of Two work because the number of unseen cards is
+close to 50. If you're on a flush draw with 9 outs, on the turn your
+chance is 9/46 which is close to 9/50. 9/46 is 0.195 while 9/50 is 0.18,
+these numbers are close. On the turn, your chance is 9/45 which is close to
+9/50. 9/45 is 0.20 while 9/50 is 0.18.
+
+\section{Pot odds}
+
+Now you know your winning percentages you can tell if a call is worth it or not.
+If you're a 24\% chance after the turn bit you have to call a bet of 1,000 into
+a pot of 1,700, you're not getting a high enough return. You're a 1 in 4 chance,
+but you're only winning 1.7 times your money. You want 3 to 1 or better. If
+instead you have to call 1,000 into a pot of 3,200, go for it. 3 out of 4 times
+you miss and it costs you 3,000, but 1 in 4 times you win and win 3,200. 
+
+In tournaments you sometimes make a call where the pot odds don't justify it,
+because chips are so important. In cash games you should pay a lot of
+attention to the percentages and the pot odds.
+
+\section{Implied odds}
+
+Pot odds tell you what you'll win from the pot right now if you improve your hand.
+But there's a final betting round after the river, and if you hit your hand you should
+win extra chips on the river. Of course if your opponent is already all in before you
+make your call, there's no more chips to be won. But usually you can count on
+winning at least the amount of the call extra on the river, so you can factor
+that into your calling decision. 
+
+\section{Flop percentages}
+
+If you have seperate cards, half of the time you hit no pair, the other half of the
+time you hit one pair and very occasionally (5\%) you hit two pairs.
+
+If you have a pocket pair, you hit your set about 12\% of the time, 1 in 8.
+
+If you haven't hit the card you want on the flop, the chances of doing it
+on either the turn or the river is about half as much as your chances
+were of doing it
+on the flop. So if you miss your 12\% chance of hitting a set on the flop, you're
+roughly a 6\% chance of doing it on the turn or river. The Rule of Four says you
+have 2 outs after the turn, so your chance of improving is 4 x 2 = 8\%.
+
+This is why in an AA versus KK confrontation, the AA is an 80\% favourite.
+KK needs to hit the third K to win, and that will happen 20\% of the time.
+
+The chance that both AA and KK will hit a set on the flop is 1\%.
+
+You probably know already that AK versus JJ is close to a 50/50 coinflip.
+The percentages are actually AK 48\% and JJ 52\% but those numbers are so
+close it's almost 50/50. Basically AK will end up with a pair on the flop 50\%
+of the time and a pair by the river about 70\% of the time. But JJ will make
+a set roughly 20\% of the time and that set will normally be the winner. So the AK winning percentage is
+the chance that AK will hit a pair minus the chance that JJ won't hit a set.
+The JJ winning percentage is the chance AK won't hit a pair plus the chance
+JJ will hit a set.
+
+
