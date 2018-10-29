@@ -1,0 +1,94 @@
+\documentclass{book}
+% FIXME: if you give draft as a \documentclass option here,
+% the cards don't show up!! figure out and fix this??
+
+% Last updated: 20181029
+
+% \documentclass[11pt,a4paper,draft,openany]{book}
+\usepackage{poker}
+\setkeys{poker}{colorset=bw}
+\setcounter{secnumdepth}{0}
+%% secnumdepth 0 : number chapters, but not sections or subsections.
+%
+% outline blank styles for hearts and diamonds, filled in styles
+% for spades and clubs.
+% \usepackage{doublespace} doesn't work for me yet
+\begin{document}
+%-------------------------- front matter of the document
+
+% FIXME: grab .eps files for picture cards from 
+% http://www.tug.org/texlive//devsrc/Master/texmf-dist/tex/latex/pst-poker/
+
+% FIXME: grab poker.sty from
+% http://web.mit.edu/foley/games/Arcadia/sr/poker/poker.sty
+
+\title{Winning Pub Poker}
+\author{Stuart Cooper}
+\date{First Edition\\December 2018}
+%% \begin{frontmatter}
+%% \begin{dedication}
+%% \begin{center}
+%%  \begin{large}
+%% \textbf{Dedication}
+%% \end{large}
+%% \end{center}
+%% \null\vfill
+%% \begin{center}
+
+%% For Michael Douglas Cooper, my father.
+
+%% \vspace{12pt}
+%% \end{center}
+%% \null\vfill
+%% \end{dedication}
+\maketitle
+\tableofcontents
+%% \end{frontmatter}
+% \begin{spacing}{1.21}
+\include{intro}
+\include{topten}
+%-------------------------- body of the document
+\part{Fast Poker Tournaments}
+\include{types_of_tournaments}
+\include{fast_tournament}
+\include{cricket_games_and_poker_structure}
+\include{gambling_theory}
+\include{odds_and_outs}
+\part{Gameplay and Structure}
+\include{dealing}
+\include{putting_players_on_a_hand}
+\include{rules}
+\part{Playing your hand}
+\include{howto_preflop}
+\include{howto_flop}
+\include{howto_turn}
+\include{howto_river}
+\part{Essential Skills}
+\include{bet_sizing}
+\include{position_plays}
+% \include{cracking_hands}
+\include{classifying}
+\include{stereotypes}
+\include{telegraphs}
+\include{tells}
+\include{heads_up}
+\part{Useful concepts}
+\include{decisions_and_outcomes}
+\include{game_selection}
+% \include{image}
+\include{breaks}
+\include{all_in_is_not_a_value_bet}
+\include{nobody_bluffs}
+\include{big_money_cards}
+\include{the_pub_poker_price}
+\include{etiquette}
+\include{snippets}
+% \part{Other poker games}
+% \include{chip_chop}
+\part{Extra Information}
+% \include{pokernetwork}
+\include{apw}
+\include{glossary}
+% \end{spacing}
+%-------------------------- back matter of the document
+\end{document}
