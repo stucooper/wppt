@@ -58,28 +58,37 @@ bets over time and wins five and loses five, he's not even. He's lost
 Overall he's down \$40- that \$40 hasn't been paid to winning players,
 it's the house cut that the betting site takes for running the game.
 He's effectively paying \$4 on every \$100 he bets, win or lose.
+Four percent.
 
 The amount of money a casino or betting site keeps for running the
 game is called the ``rake'', the ``house cut'' (or even the ``vig'',
 short for ``vigorish'', a word you won't hear used very often).
-In Poker tournaments you normally pay a rake of 10\%, with the rest of
-your buyin going into the prize pool.
+In small poker tournaments you normally pay a rake of 10\%, with the
+rest of your buyin going into the prize pool.
 
 Consider Roulette, ``pick the exact number'' bet. I'm in a casino,
 I don't want to play too big but I'll try a number at Roulette for a few
-spins, betting \$10 each time. If a different number comes up I lost \$10,
-if I score the right number I get \$360 back, winning \$350. There's one
-zero on the table and the numbers 1 to 36, so I have a 1 in 37 chance of
+spins, betting \$10 each time. If a different number comes up I lose \$10,
+if I score the right number I get \$360 back, winning \$350. There's two
+zeroes on the table and the numbers 1 to 36, so I have a 1 in 38 chance of
 winning.
 
-EV = Probability of winning x (amount won) - Probability of losing x (amount lost) \\
-   = (1/37) x \$350 - (36/37) x \$10 \\
-   = (350/37 - 360/37)  \\
-   = \$9.46 - \$9.73 \\
-   = -\$0.27
+EV = Probability of winning x (amount won) - Probability of losing x
+(amount lost) \\
+   = (1/38) x \$350 - (37/38) x \$10 \\
+   = (350/38 - 370/38)  \\
+   = \$9.21 - \$9.74 \\
+   = -\$0.53
 
-Every \$10 bet at roulette I expect to cost me 27 cents. This is a 2.7\% house
-edge- they are paying under the true odds of picking the right number.
+Every \$10 bet at roulette I expect to cost me 53 cents. This is a 5.3\% house
+edge-- they are paying under the true odds of picking the right
+number.
+
+Another way of looking at this is seeing the cost if you backed every
+outcome. It costs you \$380 to put \$10 on each of the 38 numbers, and
+you know without even watching the ball drop that you will have \$360
+afterwards. You've lost \$20 of the \$380 you put on, which as a
+fraction is 1\19 which is 0.053 which as a percentage is 5.3\%.
 
 % We'll be using exactly the same Expected Value calculation in poker. In
 % those calculations the amount won will usually be the pot we are calling a bet
@@ -87,20 +96,20 @@ edge- they are paying under the true odds of picking the right number.
 
 EV is a hard concept to understand at first, because when you actually
 play, you'll find that every bet at Roulette costs you \$10, not
-27 cents. You can't sit dressed up at a Roulette Table and sip free
-drinks and have 10 shots at picking the right number and walk out \$2.70
+53 cents. You can't sit dressed up at a Roulette Table and sip free
+drinks and have 10 shots at picking the right number and walk out \$5.30
 down. You walk out \$100 down. But if you play thousands and thousands
 of spins, and get your fair share of wins, every \$10 spin (including
-the winning spins) costs you 27 cents.
+the winning spins) costs you 53 cents.
 
-This 2.7\% is the house edge, and it works on every spin. These little 2.7\%
+This 5.3\% is the house edge, and it works on every spin. These little 5.3\%
 edges add up over time and over spins and they pay for the staff, the
 security, the equipment and the nice casino profits. They pay for the
 subsidised meals at the cafe and the lucky member's draw. That plus
 all the Poker Machines.
 
 In a typical spin on a roulette table there could be a few thousand dollars
-spread across the numbers. The casino's making 2.7\% on the exact number
+spread across the numbers. The casino's making 5.3\% on the exact number
 bets and various other percentages on all the other kinds of Roulette Bets,
 some of which have exotic names like ``Manque''.
 
@@ -147,13 +156,14 @@ make \$10, 20 times I'll lose \$10. I should end up \$540 to \$660 ahead
 at the end of the 100 hands.
 
 Let's look at the EV:
-EV = (Probability of winning) x amount won - (Probability of losing) x amount lost \\
+EV = (Probability of winning) x amount won - (Probability of losing) x
+amount lost \\
    = (80/100) x \$10 - (20/100) x \$10 \\
    = \$8 - \$2 \\
    = \$6.
 
 Every time we play this \$10 JJ versus 99 game, I expect to win \$6. That's a
-massive 60\% on my investment, more than 20 times the 2.7\% casino makes on
+massive 60\% on my investment, more than 10 times the 5.3\% casino makes on
 pick the number in roulette. I just sit back and let the money roll in.
 
 But I didn't want to play this game for one \$1,000 hand, because then
