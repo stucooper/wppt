@@ -1,0 +1,3 @@
+#!/bin/bash
+# convenience shell script to grab the LaTeX created pdf from desktop
+scp 10.1.1.2:~/wppt/winning_pub_poker.pdf .
