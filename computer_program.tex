@@ -20,7 +20,7 @@ and Deeper Blue.
 
 \section*{Under the gun Preflop Decision}
 
-I'll sketch out a program which I'll call utg_preflop. It's written
+I'll sketch out a program which I'll call utgPreflop. It's written
 in what IT guys call Pseduocode. Pseudocode isn't a real programming
 language like Java, Python or C++, but someone who does know those
 programming languages can take the Pseudocode and turn it into a real
@@ -28,12 +28,12 @@ program. When I use brackets after a word that's a function call.
 A function is a mini-program that returns a small piece of information
 that the program uses to make its decisions.
 
-A program has inputs and outputs. The output of utg_preflop will
+A program has inputs and outputs. The output of utgPreflop will
 be one of six words: FOLD, LIMP, RAISE2, RAISE4, RAISE5 and SHOVE.
 For my first version, there will just be one input, my two card
 holding.
 
-utg_preflop version 0.1
+utgPreflop version 0.1
 
 if pocketaa(holding) return RAISE4;
 if pocketkk(holding) return RAISE2;
@@ -53,3 +53,67 @@ trashHand() or okHand() but you can imagine what holdings
 meet which criteria. My program raises a different amount
 for the high pocket pairs. JJ raises biggest because we'll win the
 blinds right now with that hand if we can.
+
+There's a huge problem with utgPreflop. It's not considering enougn inputs.
+It's just looking at the holding in isolation. Another thing that needs
+to be looked at is stack sizes. Shoving all-in with Ace-King is good when
+our stack is 10BB or so, but it's poker suicide doing with with a 50BB stack
+when the only hand that will call us in AA or KK. Also, it hasn't taken
+into account the number of players at the table. A9 is a fold UTG
+at an 8-player table, but at a 5-player table it's a raise.
+
+I won't write up Pseudocode for Version 0.2 of utgPreflop, what I'm
+interested in now is what extra inputs should the program consider?
+As well as our own cards and the number of players dealt to, what do
+we know about those other players? If three of them have been maniacs
+so far, we can change our big pocket pair strategy to LIMP and expect
+to get a big check raise in.
+
+A full version of utgPreflop would have a whole bunch of inputs, such
+as
+
+holding
+numPlayers
+myStackSize()
+blindsAboutToGoUp()
+seat4StackSize()
+seat4Image()
+seat4OnTilt()
+seat4BadBeatedLately()
+seat4Maniac()
+seat4Rock()
+seat4CallingStation()
+seat4Expert()
+seat5StackSize()
+seat5Image()
+...
+
+The logic and thinking that computer programs use to
+make their decisions are called Algorithms. They're like a good
+cooking recipe that a chef uses to make a great meal. Facebook,
+Amazon, Google, Netflix, Instagram, YouTube and big smart Internet
+companies use Algorithms to give you what you want on the Internet.
+They continually improve and refine these Algorithms, making them
+better and better over time. A whole bunch of companies trade Shares
+and Foriegn Currency using Computer Algorithms; buying and selling
+when their algorithms determine the price will go up or down.
+
+% FIXME: add the fact that a computer program can do properly random
+% numbers?
+
+One thing no computer program can save you from is wrong input.
+If utgPreflop has been fed the input that Seat 6 is a maniac,
+but Seat 6 is actually a rock, it will come up with the wrong decision
+for playing JJ. utgPreflop will bet-reraise against Seat 6; which is
+fine against a maniac but terrible against a rock who has KK here.
+
+% FIXME: Genesis of the Daleks Dr Who forced to give away Dalek defeat
+% reasons
+
+Because of bad beats, utgPreflop and other poker programs can function
+perfectly and we will still get trounced out. Also we can be totally
+card dead (which is a kind of preflop bad beat over many hands) and
+just not get enough card power to win a tournament. Sometimes Seat 6
+is a maniac and calls our JJ shove with his Ace-Four suited and flops
+an Ace.
+
