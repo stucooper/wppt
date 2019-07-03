@@ -1,0 +1,55 @@
+\chapter{A preflop Computer Program}
+
+% Last updated: 20190703
+
+There are a lot of different ways to think about poker and write
+about poker. My day job is in computers, Information Technology, as
+both an Operations guy and a programmer. In this chapter I look at
+making a poker decision as being like a computer program. You can't
+use a computer program at the tables; your computer is your brain.
+Looking at some of the issues a computer programmer would think about
+will help me in making better decisions at the table.
+
+People have actually written computer programs to play poker on
+the Internet. They're called bots, which is Internet-speak for
+robots. They do well at playing a solid game and they never go on tilt.
+Occasionally a computer program versus humans poker game is played.
+These are the poker equivalents of the famous Chess matches between
+champion Garry Kasparov and the IBM Supercomputer programs Deep Blue
+and Deeper Blue. 
+
+\section*{Under the gun Preflop Decision}
+
+I'll sketch out a program which I'll call utg_preflop. It's written
+in what IT guys call Pseduocode. Pseudocode isn't a real programming
+language like Java, Python or C++, but someone who does know those
+programming languages can take the Pseudocode and turn it into a real
+program. When I use brackets after a word that's a function call.
+A function is a mini-program that returns a small piece of information
+that the program uses to make its decisions.
+
+A program has inputs and outputs. The output of utg_preflop will
+be one of six words: FOLD, LIMP, RAISE2, RAISE4, RAISE5 and SHOVE.
+For my first version, there will just be one input, my two card
+holding.
+
+utg_preflop version 0.1
+
+if pocketaa(holding) return RAISE4;
+if pocketkk(holding) return RAISE2;
+if pocketjj(holding) return RAISE5;
+if pocketqq(holding) return RAISE4;
+if mediumpair(holding) return RAISE2;
+if lowpair(holding) return LIMP;
+if aceking(holding) return SHOVE;
+if trashHand(holding) return FOLD;
+if okHand(holding) return LIMP;
+\# if we reach this part we have a better-than-ok hand worth a minraise
+return RAISE2;
+
+This program runs from top to bottom and as soon as it it hits a
+return statement it stops. I haven't written the functions
+trashHand() or okHand() but you can imagine what holdings
+meet which criteria. My program raises a different amount
+for the high pocket pairs. JJ raises biggest because we'll win the
+blinds right now with that hand if we can.
