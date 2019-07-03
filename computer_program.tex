@@ -54,13 +54,14 @@ meet which criteria. My program raises a different amount
 for the high pocket pairs. JJ raises biggest because we'll win the
 blinds right now with that hand if we can.
 
-There's a huge problem with utgPreflop. It's not considering enougn inputs.
-It's just looking at the holding in isolation. Another thing that needs
-to be looked at is stack sizes. Shoving all-in with Ace-King is good when
-our stack is 10BB or so, but it's poker suicide doing with with a 50BB stack
-when the only hand that will call us in AA or KK. Also, it hasn't taken
-into account the number of players at the table. A9 is a fold UTG
-at an 8-player table, but at a 5-player table it's a raise.
+There's a huge problem with utgPreflop. It's not considering enough
+inputs. It's just looking at the holding in isolation. Another thing
+that needs to be looked at is stack sizes. Shoving all-in with
+Ace-King is good when our stack is 10BB or so, but it's poker suicide
+doing with with a 50BB stack when the only hand that will call us in
+AA or KK. Also, it hasn't taken into account the number of players at
+the table. A9 is a fold UTG at an 8-player table, but at a 5-player
+table it's a raise.
 
 I won't write up Pseudocode for Version 0.2 of utgPreflop, what I'm
 interested in now is what extra inputs should the program consider?
