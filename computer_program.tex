@@ -1,6 +1,6 @@
 \chapter{A preflop Computer Program}
 
-% Last updated: 20190703
+% Last updated: 20190705
 
 There are a lot of different ways to think about poker and write
 about poker. My day job is in computers, Information Technology, as
@@ -58,8 +58,9 @@ There's a huge problem with utgPreflop. It's not considering enough
 inputs. It's just looking at the holding in isolation. Another thing
 that needs to be looked at is stack sizes. Shoving all-in with
 Ace-King is good when our stack is 10BB or so, but it's poker suicide
-doing with with a 50BB stack when the only hand that will call us in
-AA or KK. Also, it hasn't taken into account the number of players at
+doing it with with a 50BB stack where it's winning 1.5BB most of the
+time but the only hands that call us are now AA or KK and we lose 50BB.
+Also, it hasn't taken into account the number of players at
 the table. A9 is a fold UTG at an 8-player table, but at a 5-player
 table it's a raise.
 
@@ -116,5 +117,6 @@ perfectly and we will still get trounced out. Also we can be totally
 card dead (which is a kind of preflop bad beat over many hands) and
 just not get enough card power to win a tournament. Sometimes Seat 6
 is a maniac and calls our JJ shove with his Ace-Four suited and flops
-an Ace.
+an Ace. Even with great decision making and near-perfect play; we will
+still lose most of the tournaments we play in.
 
