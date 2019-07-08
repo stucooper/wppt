@@ -1,6 +1,6 @@
 \chapter{A preflop Computer Program}
 
-% Last updated: 20190707
+% Last updated: 20190708
 
 There are a lot of different ways to think about poker and write
 about poker. My day job is in computers, Information Technology (IT),
@@ -110,11 +110,8 @@ Amazon, Google, Netflix, Instagram, YouTube and big smart Internet
 companies use Algorithms to give you what you want on the Internet.
 They continually improve and refine these Algorithms, making them
 better and better over time. A whole bunch of companies trade Shares
-and Foriegn Currency using Computer Algorithms; buying and selling
+and Foreign Currency using Computer Algorithms; buying and selling
 when their algorithms determine the price will go up or down.
-
-% FIXME: add the fact that a computer program can do properly random
-% numbers?
 
 One thing no computer program can save you from is wrong input.
 If utgPreflop has been fed the input that Seat 6 is a maniac,
@@ -130,16 +127,18 @@ fine against a maniac but terrible against a rock who has KK here.
 utgPreflop is just one program, and you'll need four of them to
 play a hand to completion from that position. First utgPreflop,
 then utgFlop, utgTurn and utgRiver. The later programs of course
-have knowledge of the earlier programs and the full play of the hand.
-The complexity of the later programs goes up and up, as they respond
-to new information in the hand.
+have knowledge of the earlier programs and the full play of the hand
+up to that point. The complexity of the later programs goes up and up,
+as they respond to new information in the hand.
 
 Because of bad beats, utgPreflop and your other poker programs can
 function perfectly and you still get trounced out. You can be totally
-card dead (which is a kind of preflop bad beat spread out over many
-hands) and just not get enough card power to win a
-tournament. When Seat 6 is a maniac he incorrectly calls your JJ shove
-with Ace-Four suited and flops an Ace. Even with great decision making
-and near-perfect play; you still lose most of the tournaments you play
-in.
+card dead and just not have enough card power to win a
+tournament. Being card dead is a preflop bad beat,
+spread over many hands. By normal laws of probability you'd get dealt
+some playable hands now and again, but tonight you're just getting
+trash hand after trash hand. When Seat 6 is a maniac he incorrectly
+calls your JJ shove with Ace-Four suited and flops an Ace. Even with
+great decision making and near-perfect play; you still lose most of
+the tournaments you play in.
 
