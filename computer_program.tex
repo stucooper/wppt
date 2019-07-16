@@ -1,6 +1,6 @@
 \chapter{A preflop Computer Program}
 
-% Last updated: 20190713
+% Last updated: 20190716
 
 There are a lot of different ways to think about poker and write
 about poker. My day job is in computers, Information Technology (IT),
@@ -79,20 +79,21 @@ blinds right now with that hand if we can.
 
 One improvement to utgPreflop is to add randomisation. A good strategy
 with KK might be to RAISE2 60\% of the time, RAISE4 20\% of the time,
-RAISE2 15\% of the time and LIMP 5\% of the time. Computer programs
-are much better at doing this than humans are. If you've read
-Dan Harrington's books, he suggests using the second hand of your
-watch to come up with a random number. A computer program will do an
-even better job of properly randomising the decisions.
+RAISE2 15\% of the time and LIMP 5\% of the time. With a low pair we
+might LIMP 70\%, RAISE2 25\% of the time and even FOLD 5\%. Computer
+programs are much better at doing random numbers than humans are. If
+you've read Dan Harrington's books, he suggests using the second hand
+of your watch to come up with a random number. A computer program will
+do a much better job of properly randomising the decisions.
 
 There's a huge problem with utgPreflop. It's not considering enough
 inputs. It's just looking at the holding in isolation. Another thing
 that needs to be looked at is stack sizes. Shoving all-in with
 Ace-King is good when our stack is 10BB or so, but it's poker suicide
 doing it with a 50BB stack where it's winning 1.5BB most of the
-time but the only hands that call us are now AA or KK and we lose 50BB.
-Also, it hasn't taken into account the number of players at
-the table. A9 is a fold UTG at an 8-player table, but at a 5-player
+time but the only hands that call us are now AA or KK and we lose our
+tournament. Also, it hasn't taken into account the number of players
+at the table. A9 is a fold UTG at an 8-player table, but at a 5-player
 table it's a raise.
 
 I won't write up Pseudocode for Version 0.2 of utgPreflop, what I'm
@@ -106,7 +107,9 @@ A full version of utgPreflop would have a whole bunch of inputs, such
 as
 
 holding
-numPlayers
+numDealtPlayers
+numActivePlayers
+NewRandomNumber
 myStackSize()
 blindsAboutToGoUp()
 seat4StackSize()
@@ -130,8 +133,9 @@ They continually improve and refine these Algorithms, making them
 better and better over time. A whole bunch of companies trade Shares
 and Foreign Currency using Computer Algorithms; buying and selling
 when their algorithms determine the price will go up or down.
-Self-driving cars use algorithms, and continuously updating input from
-their cameras on the other traffic and road conditions.
+Self-driving cars use algorithms, continuously updating their input
+from their cameras and also getting wireless updates about traffic and
+road conditions.
 
 One thing no computer program can save you from is wrong input.
 If utgPreflop has been fed the input that Seat 6 is a maniac,
