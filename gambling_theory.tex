@@ -2,18 +2,27 @@
 
 % Last updated: 20200425
 
-This chapter covers some statistical ideas from gambling in general that
-are worth knowing.
+This chapter covers some gambling maths that is well worth knowing.
 
 \section{Expected Value}
 
 The Expected Value (``EV'') of a bet is how much you expect to win or lose
 each time you make that bet. It's calculated as the probability of
 winning times amount won, minus the probability of losing times amount
-lost. Probability in Maths is a fraction between 0 (no chance)
-and 1 (certain). A lot of the probabilties we will see in Poker
-are expressed as percentages, it is trivial to turn these into a number
-between 0 and 1. 50\% is 0.5, 18\% is 0.18 and so on.
+lost. Probability in Maths is a decimal between 0.00 (no chance)
+and 1.00 (certain). A lot of the probabilties we will see in Poker
+are expressed as percentages, it is trivial to turn these into a decimal
+50\% is 0.5, 18\% is 0.18 and so on. Divide a
+percentage by 100 to get the decimal, multiply the decimal by 100 to
+get the percentage.
+
+The Probability of winning I call P(win) and the Probability of losing
+I'll call P(loss). Expected Value is defined by the equation \\
+EV = P(win) x (amount won) - P(loss) x (amount lost)
+
+The amount won doesn't count your stake; if you bet \$10 at \$1.70
+then the amount won to use in the formula is \$7.00. The amount lost
+is your stake.
 
 Consider flipping a coin against your friend
 for \$5. Half the time you win and make \$5. The other half of the
@@ -28,8 +37,7 @@ paying under the odds, and a bet with an expected value more than
 0 is paying over the odds. Under the odds bets are said to be
 ``negative expectation'' and are written -EV (pronounced ``minus Eee Vee'').
 Over the odds bets are ``positive expectation'' and are written +EV.
-(``plus Eee Vee''). True odds bets are called ``zero expectation''
-though you don't see that terminology often.
+(``plus Eee Vee'').
 
 \subsection*{Sports Bets}
 Sports bets pay under the odds because the betting agency take out a
@@ -44,10 +52,8 @@ balance the bets, they win no matter what. This is a house cut of 5\%,
 because the \$10 that they keep is 5\% of the \$200 that they held from
 the two players. From the player's point of view:
 
-EV = Probability of winning x (amount won) - Probability of losing x
-(amount lost) \\
-   = (1/2) x \$90 - (1/2) x \$100 \\
-   = \$45 - \$50  \\
+EV = P(win) x (amount won) - P(loss) x (amount lost) \\
+   = (1/2) x \$90 - (1/2) x \$100  = \$45 - \$50  \\
    = -\$5
 
 In the bad old days
@@ -58,7 +64,7 @@ more and return \$1.90 to \$1.95 or more for 50-50 bets. Sometimes as
 a promotion an Online site will pay \$2.00 on both sides of a
 fifty-fifty bet. This is normally done to attract new customers to the
 site; who then find that their future fifty-fifty bets only get odds
-of \$1.87 to \$1.95. Making a fifty-fifty bet that returns 2.00 feels like
+of \$1.87 to \$1.95. Making a fifty-fifty bet that returns \$2.00 feels like
 playing in a rake-free poker tournament.
 
 % FIXME: check the numbers for even money sports bets these days
@@ -72,7 +78,7 @@ it's the house cut that the betting site takes for running the game.
 He's effectively paying \$5 on every \$100 he bets, win or lose.
 Five percent.\footnote{Another way of seeing this is imagining that the
 site removes \$5 from his \$100 bet, five percent, and he is now
-playing with \$95 at the true fifty-fifty odds of 2.00 to make \$190.}
+playing with \$95 at the true fifty-fifty odds of \$2.00 to make \$190.}
 
 The amount of money a casino or betting site keeps for running the
 game is called the ``rake'' or the ``house cut''.
@@ -88,8 +94,7 @@ if I score the right number I get \$360 back, winning \$350. There's two
 zeroes on the table and the numbers 1 to 36, so I have a 1 in 38 chance of
 winning.
 
-EV = Probability of winning x (amount won) - Probability of losing x
-(amount lost) \\
+EV = P(win) x (amount won) - P(loss) x (amount lost) \\
    = (1/38) x \$350 - (37/38) x \$10 \\
    = (350/38 - 370/38)  \\
    = \$9.21 - \$9.74 \\
@@ -113,11 +118,11 @@ on my total.
 % those calculations the amount won will usually be the pot we are calling a bet
 % into and the amount lost will usually be the amount we have to call.
 
-EV is a hard concept to understand at first, because when you actually
+EV is a hard concept to grasp at first, because when you actually
 play, you'll find that every bet at Roulette costs you \$10, not
 53 cents. You can't sit at a Roulette Table and
 have Ten \$10 shots at picking the right number and walk out \$5.30
-down. You walk out \$100 down. But if you play thousands and thousands
+down. You walk out \$100 down! But if you play thousands and thousands
 of spins, and get your fair share of wins, every \$10 spin (including
 the winning spins) costs you 53 cents.
 
@@ -129,8 +134,7 @@ all the Poker Machines.
 
 In a typical spin on a roulette table there's a few thousand dollars
 spread across the table. The casino's making 5.3\% on the exact number
-bets and various other percentages on all the other kinds of Roulette Bets,
-some of which have exotic names like ``Manque''.
+bets and various other percentages on the other kinds of Roulette Bets.
 
 Run a few spins in an hour, sit back and watch the money roll in.
 
@@ -175,8 +179,7 @@ make \$10, 20 times I'll lose \$10. I should end up \$540 to \$660 ahead
 at the end of the 100 hands.
 
 Let's look at the EV:
-EV = (Probability of winning) x amount won - (Probability of losing) x
-amount lost \\
+EV = P(win) x amount won - P(loss) x amount lost \\
    = (80/100) x \$10 - (20/100) x \$10 \\
    = \$8 - \$2 \\
    = \$6.
@@ -241,3 +244,14 @@ Value of this bet? (b) Is this bet fairer than Pick the Exact Number?
 \arabic{chapter}.2 If Club Keno had a -5\% EV, how much would a \$10
 exact bet return? \textit{Hint: Do the calculation in dollars not
 cents, the EV to use in the equation is -0.5}
+
+\arabic{chapter}.3 (Gambler's Ruin). A Roulette player has an idea he
+can make \$10 by continually doubling his \$10 bet on Red until it
+comes up, then quitting \$10 ahead. If his second bet of \$20 loses,
+he's down \$30 but will bet \$40 on his third bet. The table maximum
+for this kind of bet is \$200. What is the chance that he will go bust
+by losing his fifth bet of \$160? \textit{Hint: The probability of
+losing five bets in a row is the probability of losing it once
+multiplied by itself five times, ie. P(loss) to the power of
+five. Use a calculator (physical or online) and round to two
+decimal places}.
