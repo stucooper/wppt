@@ -32,8 +32,8 @@ often, but the house cut of 5.3\% is exactly the same.
 So a \$10 Exact Number Keno bet with an EV of -5\% should return
 \$38.
 
-8.3 P(loss) = (20/38) = .52 \\
-P(five consecutive losses)  = .52 x .52 x .52 x .52 x .52 \\
+8.3 P(loss) = (20/38) = 0.52 \\
+P(five consecutive losses)  = 0.52 x 0.52 x 0.52 x 0.52 x 0.52 \\
 = 0.038 = 0.04 \\
 
 The gambler has a 4\% chance (1 in 25) of losing five bets in a row
@@ -54,3 +54,22 @@ river = 0.12 x 0.04 = 0.0048 = less than 1 percent. 1 in 200.
 
 % FIXME: Add an answer for Question 9.3:  How often does a flopped set
 % become a Full House?
+
+9.3 Assume a top set 99 on a 987 flop. There are 7 outs to improve on
+the turn (the final 9, one of three 888 or one of three 777). By the
+rule of 2 that's 14\% on the next card.
+
+The turn doesn't pair the board, it's a 4 say. Now going to the river,
+with the turnboard 9874, we have the same 7 outs we had on the flop,
+plus the 4 can pair, we have three new 444 outs. That's 10 outs going
+to the river which by the Rule of 20 is 20\%.
+
+If we hit on the turn, we can hit again (not that we need to) on the
+river with one of 6 outs.
+
+Hit on turn = 7 outs = 7/46 = 0.15 = 15\% \
+Miss on turn but hit on the river = 85\% x 10/45 = 0.172 = 17\%
+
+You improve to a full house 31\% of the time.
+
+Miss on turn/Miss on river = 40 ins x 36 ins = 0.80 x 0.72 = 0.576
