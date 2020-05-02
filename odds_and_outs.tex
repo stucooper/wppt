@@ -1,11 +1,11 @@
 \chapter{Odds and Outs}
 
-% Last updated: 20200427
+% Last updated: 20200502
 
 Now that you've seen how expected value works, let's look at how it
-works in Holdem. There's a bit of Maths in this chapter but nothing you
-didn't learn at school, just some multiplication, division and a
-few percentages.
+works in Holdem. That EV equation we saw in the last chapter will turn
+up again and again, and we'll see which bets are good bets and which
+bets are bad bets.
 
 \section{Percentages}
 
@@ -13,23 +13,44 @@ If your chance of winning the hand is greater than 50\%, you're the
 favourite. If your chance is 80\%, you'll win the hand 4 times out of
 5. If your chance is 20\%, you'll win 1 time out of 5.
 
-If you've watched some poker on the Internet, you'll see winning
-percentages written next to each player's hand. When you're playing
-the game yourself you don't know the other players' cards, but you can
-take a good shot at estimating your own chances of winning.
+If you've watched modern poker hands on TV and the Internet, you'll
+see winning percentages written next to each player's hand. When
+you're playing the game yourself you don't know the other players'
+cards, but you can take a good shot at estimating your own chances of
+winning.
+
+Pot Odds are the return you get from calling a bet. When the pot is
+1200 and someone bets 800, to stay in the hand you have to call that
+800 bet. The pot you face is 2000, so your pot odds are 2000/800 which
+is 2.5 to 1. You win two and a half times your bet, if you win, so
+it's like betting \$800 on a horse at the price of \$3.50.
+
+The worst pot odds you can face in a single call of poker is even
+money. If you're on the big blind of the first hand of a tournament
+and with blinds of 25/50 a drunk shoves all in for 10,000 and everyone
+folds, you now face a 9,950 call into a 10,075 pot (your 50 big blind
+and the 25 small blind now belong to the pot even though your 50 blind
+chips are still in front of you on the table).
 
 \section{Outs}
 
-A card that improves your hand to a better hand is called an \textbf{out}. I
-have \fourd\tred\ and I call a raise from the big blind, two of us
-take the flop. The big blind has \Ah\Jc. The flop comes
+A Board card that improves your hand to a better hand is called an
+\textbf{out}. A card that doesn't help is a \textbf{blank} or a
+\textbf{brick}. We usually start counting outs after the flop; but
+sometimes, especially in High Card Holdem, we can think about outs
+even in the Preflop betting round. For now, we will count outs after
+the flop.
+
+I have \fourd\tred\ and I call a raise from the big blind, two of us
+take the flop. Calling a raise with \fourd\tred\ is questionable bad
+poker, but ignore that for now. The big blind has \Ah\Jc. The flop comes
 \Ad\tens\eigd. My four high won't win anything, but I can improve to a
 flush if a diamond comes on the turn or the river, which I expect to
 be the winner. There's 13 diamonds in the deck of cards, I've seen 4
 of them, there's 9 remaining. I have 9 outs after the flop to improve
 to a flush. I will take the lead and win the pot if the turn card is
 one of \Kd\Qd\Jd\tend\nined\sevd\sixd\fived\twod\ . Any other turn
-and I'm still losing.
+is a brick and I'm still losing.
 
 Now the turn comes \twoc\, giving a board of \Ad\tens\eigd\twoc. I
 didn't make my flush yet, but I've picked up a chance at a
@@ -42,6 +63,12 @@ river. I will win if the river cards is one of
 \Kd\Qd\Jd\tend\nined\sevd\sixd\fived\twod\fives\fivec\fiveh . Any
 other river and I've lost this hand unless I can bluff my way out of
 it.
+
+A non-Diamond Five on the river is now my preferred card to hit,
+because it will look like a brick to the Enemy and he should call an
+enormous raise with it. A Diamond on the river will still win me the
+pot, but will be an obvious out for me that the Enemy will slow down
+his betting on.
 
 % FIXME: list all the outs
 
@@ -252,9 +279,6 @@ runner-runner trips, with unpaired hole cards that haven't hit a pair
 on the flop?
 
 \arabic{chapter}.3 How often does a flopped set improve to Quads or a Full
-House? \textit{Hint: This is three percentages, added together. You
-  can hit on the turn and hit again on the river. You can hit on the
-  turn and miss on the river. You can miss on the turn but hit on the
-  river. Add these three percentages up for the answer. Or, you can
-  calculate the percentage that you miss your full house (miss on the
-  turn and miss on the river) and subtract that number from 100\%.}
+House? \textit{Hint: This is two percentages added together. You
+can hit on the turn. Or you can miss on the turn but hit on the
+river. Add these percentages up for the answer.}
