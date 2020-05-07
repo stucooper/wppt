@@ -1,6 +1,6 @@
 \chapter{Classifying your opponents}
 
-% Last updated: 20200406
+% Last updated: 20200507
 
 In this chapter we look at the four different types of players in
 poker. Adjusting to each type of player is at the heart of the idea
@@ -74,7 +74,7 @@ of player characterisation. It's called \textbf{The Psychology of Poker}
 by Al Schoonmaker. It's a great book, though it concentrates
 on Limit poker betting structure and has a lot of Seven Card Stud
 content. Phil Hellmuth's \textbf{Play Poker like the Pros} has a
-similar system, again focusing on Limit betting, though Holdem only.
+similar system, again focusing mostly on Fixed Limit betting.
 Phil uses animals to characterise the player types, his animals are
 as follows: \\
 LPP=Loose/Passive: ``The Mouse'' \\
@@ -135,6 +135,9 @@ voluntary). Someone with a high VPIP is loose, he's entering more pots
 than he should, given the average distribution of cards. Someone with
 a low VPIP is tight, entering fewer pots than you'd expect.
 
+% FIXME: I could put in a story here about how PostgreSQL support
+% is mostly answering questions from PokerTracker guys
+
 \section{Four player types}
 
 Let's look at the four styles and how people in that style play poker.
@@ -157,8 +160,8 @@ a few beginner's errors (such as never knowing when the action
 is on him) and is staying in lots of pots, he's a calling station.
 
 Very friendly, social people are often calling stations.
-They feel as though raising is rude, and a good hand deserves
-to win a few more chips, so folding seems rude also. Since
+They feel as though raising is rude, and your good hand deserves
+to win a few more chips, so folding seems a bit rude also. Since
 they're winning less with their monsters (by not raising)
 and losing more with their losers (by calling) they are
 Win Small/Lose Big players. They call too much, staying
@@ -174,7 +177,7 @@ that Nice Guys finish last in poker. Now you know why.
 
 Calling Stations get a small amount of Beginner's Luck in poker.
 When the Calling Station calls every street with his Q5 against my KQ
-and the board is QT475, he wins a pretty nice pot with his two pair
+and the board runs out QT475, he wins a pretty nice pot with his two pair
 because that river sure looks like a brick to me. They don't get
 enough of this luck to survive in the game and they get value bet to
 death when they miss, which is most of the time.
@@ -190,20 +193,15 @@ their way unless you're very strong yourself.
 
 Don't try and bluff calling stations. Go for the value bet,
 and even the overbet. Charge them too much for their loose draws.
-A calling station will occasionally beat you by making two pair with a
-low river card that you're sure is a brick. That's the main element of
-Beginner's Luck in poker; beginner's stay in with bad hands and make
-weird two-pair hands on the river, against the odds, more than good
-players.
 
 Even when a loose holding does luck a good hand, it's often
 not a strong enough hand to bet. 94 suited makes only a Nine-high
 flush and loses to a higher flush. When 94 makes two pairs,
 it's rarely top two pairs. On a board like T964Q the two pair 9944
-loses to respectable two pairs like T9 and QT. So their
-holding ends up making a poker hand that's ``not strong enough to bet,
-good enough to call with, too good to fold'' which is a recipe for
-small pot wins when ahead and large pot losses when behind.
+loses to respectable two pairs like T9 and QT, and the straights.
+A loose holding ends up making a poker hand that's
+``good enough to call with, too good to fold, not strong enough to
+raise'' which again is a recipe for Win Small/Lose Big.
 
 \subsubsection{Payoff Wizards}
 
@@ -262,7 +260,8 @@ taken life-changing bad beats be rocks for months and years
 afterwards. A life-changing bad beat is one that stops you getting to
 the final table as massive chip leader in a big quarterly tournament
 with first prize of \$10,000. I once made a guy fold KT on a KK54 flop
-because he thought he was always getting bad beated again.
+because he was still trying to recover from a life-changing bad beat
+months earlier.
 
 % FIXME: move this next stuff to the stereotypes on women section?
 Some women are rocks, especially preflop. They
@@ -304,7 +303,7 @@ it's like they're smashing their own heads against a rock.
 
 You want to blind steal a lot on the Rock's Small Blind and Big Blind.
 If the Rock calls a decent flop bet or raises on any street, just get
-out of her way. Against a maniac you might take your chances with
+out of his way. Against a maniac you might take your chances with
 top pair decent kicker or even middle pair, but against a rock you
 simply fold and take a small loss on this hand.
 
