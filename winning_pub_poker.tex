@@ -2,16 +2,17 @@
 % FIXME: if you give draft as a \documentclass option here,
 % the cards don't show up!! figure out and fix this??
 
-% Last updated: 20200430
+% Last updated: 20200523
 
 % \documentclass[11pt,a4paper,draft,openany]{book}
 \usepackage{poker}
 \setkeys{poker}{colorset=bw}
-\setcounter{secnumdepth}{0}
-%% secnumdepth 0 : number chapters, but not sections or subsections.
-%
 % outline blank styles for hearts and diamonds, filled in styles
 % for spades and clubs.
+
+\setcounter{secnumdepth}{0}
+%% secnumdepth 0 : number chapters, but not sections or subsections.
+
 % \usepackage{doublespace} doesn't work for me yet
 \begin{document}
 %-------------------------- front matter of the document
@@ -24,7 +25,7 @@
 
 \title{Winning Pub Poker}
 \author{Stuart Cooper}
-\date{Second Beta\\APRIL 2020}
+\date{Second Beta\\MAY 2020}
 %% \begin{frontmatter}
 %% \begin{dedication}
 %% \begin{center}
@@ -44,30 +45,35 @@
 \maketitle
 \tableofcontents
 %% \end{frontmatter}
+%-------------------------- body of the document
 % \begin{spacing}{1.21}
+
 \part{Preliminaries}
 \include{intro}
 \include{style}
 \include{topten}
-\include{a_hand_of_holdem}
+\include{a_hand_of_holdekm}
 \include{made_hand_drawing_hand}
 \include{single_card_hands}
-%-------------------------- body of the document
+
 \part{Fast Poker Tournaments}
 \include{types_of_tournaments}
 \include{fast_tournament}
 \include{cricket_games_and_poker_structure}
 \include{gambling_theory}
 \include{odds_and_outs}
+
 \part{Gameplay and Structure}
 \include{dealing}
 \include{putting_players_on_a_hand}
 \include{rules}
+
 \part{Playing your hand}
 \include{howto_preflop}
 \include{howto_flop}
 \include{howto_turn}
 \include{howto_river}
+
 \part{Essential Skills}
 \include{hand_strength}
 \include{tournament_stages}
@@ -80,6 +86,7 @@
 \include{tells}
 \include{bluffs}
 \include{heads_up}
+
 \part{Useful concepts}
 \include{decisions_and_outcomes}
 \include{game_selection}
@@ -95,6 +102,7 @@
 \include{snippets}
 % \part{Other poker games}
 % \include{chip_chop}
+
 \part{Extra Information}
 % \include{pokernetwork}
 \include{other_games}
