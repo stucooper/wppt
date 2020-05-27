@@ -6,3 +6,5 @@
 poker.sty
 *.toc
 makeit
+*.bbl
+*.blg
