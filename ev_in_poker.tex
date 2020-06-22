@@ -16,25 +16,30 @@ few miles since the time I played there in 2000, but I'll be able to
 find it.)
 
 In Fixed Limit you often get many bets and calls in the pot by the
-turnstreet. In a \$10/\$20 game, there's often \$140 or more in the
-pot on the turnstreet with one card to come. Four players called \$10
-preflop, the button raised to \$20 and those four players all
-called. The button bet \$10 on the turn, one player dropped out and
-three players called that \$10. The pot is \$140 and the turn is
+turnstreet. In a \$10/\$20 game, there's often \$150 or more in the
+pot on the turnstreet with one card to come. Three players matched the
+\$10 big blind preflop, the button raised to \$20 and the small blind,
+big blind and the three limpers all called. Six players took the flop,
+the pot was \$120. The button bet \$10 on the flop, three players
+dropped out but two players call the \$10. The pot is \$150 and the turn is
 shown. The betting amount now doubles to \$20 but that's the only
 amount you can bet. Let's look at the EV for the Leader, with top two
-pair, betting against a Chaser who has a Flush Draw. If the flush gets
-there on the river, the Leader will check/call a Bet of \$20, and lose
-that extra money. If the flush doesn't come on the river, the Leader
-will be \$20 and the Chaser will fold and the leader will win the pot
-of \$180, which is a \$160 win on his turn bet of \$20.
+pair, betting against a Chaser who has a Flush Draw. The third player
+still in the hand has top pair no kicker and is drawing dead. He will
+realise this and reluctantly fold to a \$20 bet on the turn or the
+river and won't lose any more money in this hand. If the Chaser hits
+his flush on the river, the Leader will check/call a Bet of
+\$20, and lose that extra money along with the pot. If the flush
+doesn't come on the river, the Leader will bet \$20 and the Chaser will
+fold and the leader will win the pot of \$190, which is a \$170 win on
+his turn bet of \$20.
 
 EV = P(win) x (amount won) - P(loss) x (amount lost) \\
-   = 0.82   x (\$160)      - 0.18    x (\$180) \\
+   = 0.82   x (\$170)      - 0.18    x (\$190) \\
    = \$128 - \$32.40 \\
    = \$95.6
 
-That's the easiest bet to make in Poker; just bet it and hope that
+This is the easiest bet to make in Poker; just bet it and hope that
 your hand holds up and enjoy the money when the pot gets pushed to
 you. If the Leader is a timid player and won't bet the turnstreet
 he wins less. In this next EV equation, the Leader doesn't bet the
@@ -50,21 +55,29 @@ So if the Leader is timid and doesn't bet the turn, he'll win \$86 on
 average, but if he bets the turn, he'll win \$95.60 on average. Let's
 look at the EVs for the Chaser.
 
-If the Leader knows he's good and bets \$20 on the turn, the Chaser
-has to call \$20 for a chance of winning the \$160 in the pot plus
+If the Leader is bold and bets \$20 on the turn, the Chaser
+has to call \$20 for a chance of winning the \$170 in the pot plus
 another \$20 when the Leader crying calls the river.
 
 EV = P(win) x (amount won) - P(loss) x (amount lost) \\
-   = 0.18 x \$180 - 0.82 x (\$20) \\
-   = \$32.40 - \$16.40 \\
-   = \$16.00
+   = 0.18 x \$190 - 0.82 x (\$20) \\
+   = \$34.20 - \$16.40 \\
+   = \$17.80
 
 If the Leader is timid and doesn't bet the turn, the Chaser gets a
-free river. He has a 18\% chance of winning the \$140 pot plus a \$20
+free river. He has a 18\% chance of winning the \$150 pot plus a \$20
 crying call on the river
 
 EV = P(win) x (amount won) - P(loss) x (amount lost) \\
-   = 0.18 x (\$160) - 0.82 x (\$0) \\
+   = 0.18 x (\$170) - 0.82 x (\$0) \\
    = \$28.80 - \$0.00 \\
-   = \$28.80
+   = \$30.60
+
+These EVs are big postive amounts for both the Leader and the
+Chaser. How is this possible? It's possible because of the four
+players who were in the pot earlier but have since folded. Three
+players paid \$20 to see the flop and dropped out, a fourth player
+paid another \$10 to see the turn but is now drawing dead. There's
+\$90 of dead money in that \$150 pot, and the Leader and the Chaser
+are fighting over that \$90 plus each other's \$30 so-far-invested.
 
