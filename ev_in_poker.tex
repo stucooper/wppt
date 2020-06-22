@@ -1,7 +1,7 @@
 \chapter{Expected Value in Poker}
 
 The last two chapters have been a thorough look at two key ideas in
-poker; expected value and counting outs. Now we're going to marry
+poker; expected value and counting outs. Now we're going to join
 those concepts together and see how to use them in your betting
 decisions. First, a look at a Poker game where you fold, check, bet,
 call and raise, but by a fixed amount each time: Fixed Limit Holdem.
@@ -18,6 +18,28 @@ find it.)
 In Fixed Limit you often get many bets and calls in the pot by the
 turnstreet. In a \$10/\$20 game, there's often \$140 in the pot with
 one card to come. The betting amount by now is a fixed \$20 but that's
-the highest amount you can bet. Let's look at the EV for the Leader,
+the only amount you can bet. Let's look at the EV for the Leader,
 with top two pair, betting against a Chaser who has a Flush Draw.
+If the flush gets there on the river, the Leader will check/call a Bet
+of \$20, and lose that extra money. If the flush doesn't come on the
+river, the Leader will be \$20 and the Chaser will fold and the leader
+will win the pot of \$180, which is a \$160 win on his turn bet of
+\$20.
+
+EV = P(win) x (amount won) - P(loss) x (amount lost) \\
+   = 0.82   x (\$160)      - 0.18    x (\$180) \\
+   = \$128 - \$32.40 \\
+   = \$95.6
+
+That's the easiest bet to make in Poker; just bet it and hope that
+your hand holds up and enjoy the money when the pot gets pushed to
+you. If the Leader is a timid player and won't bet the turnstreet
+he wins less. In this next EV equation, the Leader doesn't bet the
+turn and will check/call the river and lose a bigger pot if the flush
+card comes in. If the flush misses; the betting will go check/check.
+
+EV = P(win) x (amount won) - P(loss) x (amount lost) \\
+   = 0.82   x (\$140)      - 0.18    x (\$160) \\
+   = \$114.80 - \$28.80 \\
+   = \$86.00
 
