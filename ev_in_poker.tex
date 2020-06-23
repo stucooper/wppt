@@ -24,47 +24,53 @@ the pot was \$120. The button bet \$10 on the flop, three players
 dropped out but two players call the \$10. The pot is \$150 and the turn is
 shown. The betting amount now doubles to a fixed \$20.
 
-Let's look at the EV for the Leader, with top two
-pair, betting against a Chaser who has a Flush Draw. The third player
-still in the hand has top pair no kicker and will fold to a bet.
-If the Chaser hits his flush on the river, the Leader will check/call
-a Bet of \$20, and lose that extra money along with the pot. If the
-flush doesn't come on the river, the Leader will bet \$20 and the
-Chaser will fold.
+In this example there's \$150 in the pot on the turn. The Leader has
+top two pair and is considering betting. The Chaser has a flush draw
+and an 18\% chance of improving to the winning hand on the river.
+This is a classic Made Hand versus Drawing Hand confrontation.
+The third player still in the hand has top pair no kicker and will
+fold to any bet and is drawing dead.
 
-% FIXME: Check the numbers in these equations.
+If the flush gets there on the river, the Leader will call a \$20 bet
+from the Chaser and lose the pot and that \$20 call. If the flush draw
+misses, the Leader will bet \$20 and the Chaser will fold.
 
-EV = P(win) x (amount won) - P(loss) x (amount lost) \\
-   = 0.82   x (\$170)      - 0.18    x (\$190) \\
-   = \$128 - \$32.40 \\
-   = \$95.6
+\subsection{If the Leader Bets the Turn}
 
 This is the easiest bet to make in Poker; just bet it and hope that
 your hand holds up and enjoy the money when the pot gets pushed to
-you. If the Leader is a timid player and won't bet the turnstreet
-he wins less. In this next EV equation, the Leader doesn't bet the
-turn and will check/call the river and lose a bigger pot if the flush
-card comes in. If the flush misses; the betting will go check/check.
+you.
 
 EV = P(win) x (amount won) - P(loss) x (amount lost) \\
-   = 0.82   x (\$140)      - 0.18    x (\$160) \\
-   = \$114.80 - \$28.80 \\
-   = \$86.00
+   = 0.82   x (\$170)      - 0.18    x (\$190) \\
+   = \$139.40 - \$34.20 \\
+   = \$105.20
 
-So if the Leader is timid and doesn't bet the turn, he'll win \$86 on
-average, but if he bets the turn, he'll win \$95.60 on average. Let's
-look at the EVs for the Chaser.
+\subsection{If the Leader Checks the Turn}
 
-If the Leader is bold and bets \$20 on the turn, the Chaser
-has to call \$20 for a chance of winning the \$170 in the pot plus
-another \$20 when the Leader crying calls the river.
+If the Leader is a timid player and won't bet the turn
+he wins less.
+
+EV = P(win) x (amount won) - P(loss) x (amount lost) \\
+   = 0.82   x (\$150)      - 0.18    x (\$170) \\
+   = \$123.00 - \$30.60 \\
+   = \$92.40
+
+Now let's look at the EVs for the Chaser.
+
+\subsection{When the Chaser calls the Turn}
+
+The Leader has bet the \$20 on the turn. I said that was the easiest
+bet in poker. The Chaser has the easiest call in Poker.
 
 EV = P(win) x (amount won) - P(loss) x (amount lost) \\
    = 0.18 x \$190 - 0.82 x (\$20) \\
    = \$34.20 - \$16.40 \\
    = \$17.80
 
-If the Leader is timid and doesn't bet the turn, the Chaser gets a
+\subsection{When the Chaser gets a free river}
+
+If the Leader wass timid and didn't bet the turn, the Chaser gets a
 free river. He has a 18\% chance of winning the \$150 pot plus a \$20
 crying call on the river
 
@@ -72,6 +78,7 @@ EV = P(win) x (amount won) - P(loss) x (amount lost) \\
    = 0.18 x (\$170) - 0.82 x (\$0) \\
    = \$30.60 - \$0.00 \\
    = \$30.60
+
 
 These EVs are big postive amounts for both the Leader and the
 Chaser. How is this possible? It's possible because of the four
