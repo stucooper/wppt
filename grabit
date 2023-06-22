@@ -1,3 +1,4 @@
 #!/bin/bash
 # convenience shell script to grab the LaTeX created pdf from desktop
+# don't really need this anymore, since I can build LaTeX stuff on my laptop
 scp 10.1.1.2:~/wppt/winning_pub_poker.pdf .
