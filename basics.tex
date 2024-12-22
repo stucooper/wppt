@@ -51,28 +51,47 @@ considering running him out instead of bowling the ball; the
 Poker hands are on a ladder with nine rungs. The hand on
 the highest rung wins, if two hands are on the same rung the hand with
 the higher determining cards wins. The same-rung determination
-sometimes goes against poker rarity: it's rarer to make a six-high
+sometimes goes against poker rarity: it's rarer to make a seven-high
 flush than a King-high flush, but the King-high flush wins.
 
+Because we're looking at Texas Holdem, I've added a column to the
+poker rungs table called ``Board Needs''. This shows what needs to be
+on the board for a hand on that poker rung to be possible. For a
+straight flush to be possible the board must have 3+ (three or more)
+same-suit cards that are close together. Close means three in a
+continuum of 5: three of (A2345), (23456), (34567) through to
+(TJQKA). For quads and Full Houses to be possible, the board must have
+two or more cards of the same rank; which is a fancy way of saying
+that the board must itself have a pair, trips or quads.
+
 \begin{tabular}{|l|l|l|l|} \hline
-Hand            & Example   & Board Needs       & Who wins \\ \hline
-Straight Flush  & KQJT9 samesuit     & 3+ closely samesuit &
-Highest card \\ \hline
+Hand            & Example   & Board Needs    & Who wins \\ \hline
+Straight Flush  & KQJT9 samesuit     & 3+ close suited &
+Higher card \\ \hline
 Quads           & 7777A     & 2+ of a rank   & Higher quads then
-kicker \\ \hline
-Full House      & JJJ55     & 2+ of a rank   & Higher trips then
+1 kicker \\ \hline
+Full House      & JJJ55     & 2-3 of a rank  & Higher trips then
 higher pair \\ \hline
-Flush           & KT852 samesuit & 3+ samesuit & Highest unique
+Flush           & KT852 samesuit & 3+ suited & Highest unique
 flushcard \\ \hline
+Straight        & 87654     & 3+ close       & Highest card \\ \hline
+Trips           & AAA75     & any            & Highest trips then 2
+kickers \\ \hline
+Two Pair        & JJ773     & any            & Highest pair then
+second pair then 1 kicker \\ \hline
+One Pair        & JJT75     & any            & Highest pair then 3
+kickers \\ \hline
+High Card       & AJ986     & any            & Highest card then 4
+kickers \\ \hline
 \end{tabular}
 
-A quick word on ``any'' for the Board Requirements in the table. In
+A quick word on ``any'' for the Board Needs column. In
 Holdem you can ``play the board'', use the five community cards as
 your final poker hand. For a straight to be somebody's hand, not only
 must the board have at least three close cards, but the board can't
 itself be a flush or a full house or quads. For High Card to be
 someone's hand, the board must have no straights, flushes or even a pair
-on it.
+on it. You have to play the highest rung hand you can.
 
 \section{Kickers}
 
@@ -86,6 +105,23 @@ effectively five kickers. You count down the kickers until one is
 higher. If the kickers are the same, both hands win and it's a split
 pot.
 
+You have to use higher kickers from the board if they are available.
+If I've got J8 against J6 and the board is AKJ93 my best hand is JJAK9
+and the player holding J6 also has the best hand JJAK9. Both our hands
+are a pair on the poker ladder, the kickers in this case are AK9 for
+both of us so it's a split pot. If I've got JT against J6 on the board
+of AKJ93 my final hand is JJAKT and I beat J6 whose best hand is
+JJAK9.
+
+You can think of kickers as ``tie-breaking'' cards that are used when
+the main part of the poker hand is the same.
+
+There are no kickers in Straights. AJ against KJ on a board of
+T9872 sees both players making the JT987 straight and there are no
+kickers. AJ against QJ on the T9872 board sees QJ make a higher
+straight, QJT98 and win the pot. AJ against JT on T9872 sees another
+split pot, the fact that JT can make a pair of tens doesn't count, he
+has to play his highest rung poker hand which is the JT987 straight.
 
 
 
