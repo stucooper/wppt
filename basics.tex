@@ -72,8 +72,8 @@ Quads           & 7777A     & 2+ of a rank   & Higher quads then
 1 kicker \\ \hline
 Full House      & JJJ55     & 2-3 of a rank  & Higher trips then
 higher pair \\ \hline
-Flush           & KT852 samesuit & 3+ suited & Highest unique
-flushcard \\ \hline
+Flush           & KT852 samesuit & 3+ suited & Highest unique flushcard
+\\ \hline
 Straight        & 87654     & 3+ close       & Highest card \\ \hline
 Trips           & AAA75     & any            & Highest trips then 2
 kickers \\ \hline
@@ -81,7 +81,7 @@ Two Pair        & JJ773     & any            & Highest pair then
 second pair then 1 kicker \\ \hline
 One Pair        & JJT75     & any            & Highest pair then 3
 kickers \\ \hline
-High Card       & AJ986     & any            & Highest card then 4
+High Card       & AJ986     & no pairs       & Highest card then 4
 kickers \\ \hline
 \end{tabular}
 
@@ -95,15 +95,15 @@ on it. You have to play the highest rung hand you can.
 
 \section{Kickers}
 
-Kickers are used as tie-breakers for the low-rung poker hands of
+Kickers are used to find the winners for the low-rung poker hands of
 trips, two pair, one pair and high card. Full houses, flushes and
 straights use all five cards and don't have kickers. A two pair hand
 has one kicker (the highest card not involved in the two pair), trips
-has two kickers (the two cards not in the trips), one pair has three
-kickers (the ones that don't make the pair) and high card is
-effectively five kickers. You count down the kickers until one is
-higher. If the kickers are the same, both hands win and it's a split
-pot.
+has two kickers (the best two cards not in the trips), one pair has
+three kickers (the best ones that don't make the pair) and high card
+is effectively the five highest cards. You count down the kickers
+until one is higher. If the kickers are the same, both hands win and
+it's a split pot.
 
 You have to use higher kickers from the board if they are available.
 If I've got J8 against J6 and the board is AKJ93 my best hand is JJAK9
@@ -117,11 +117,14 @@ You can think of kickers as ``tie-breaking'' cards that are used when
 the main part of the poker hand is the same.
 
 There are no kickers in Straights. AJ against KJ on a board of
-T9872 sees both players making the JT987 straight and there are no
-kickers. AJ against QJ on the T9872 board sees QJ make a higher
+T9872 sees both players making the JT987 straight and it's a split
+pot. AJ against QJ on the T9872 board sees QJ make a higher
 straight, QJT98 and win the pot. AJ against JT on T9872 sees another
 split pot, the fact that JT can make a pair of tens doesn't count, he
 has to play his highest rung poker hand which is the JT987 straight.
 
+If two players have flushes, the five flush cards are counted down
+high to low and the person with the highest unique flush card wins.
+% FIXME give an example of this.
 
 
