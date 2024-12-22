@@ -54,14 +54,24 @@ the higher determining cards wins. The same-rung determination
 sometimes goes against poker rarity: it's rarer to make a six-high
 flush than a King-high flush, but the King-high flush wins.
 
-% FIXME put the ranking table in
+\begin{tabular}{|l|l|l|l|} \hline
+Hand            & Example   & Board Needs       & Who wins \\ \hline
+Straight Flush  & KQJT9 samesuit     & 3+ closely samesuit &
+Highest card \\ \hline
+Quads           & 7777A     & 2+ of a rank   & Higher quads then
+kicker \\ \hline
+Full House      & JJJ55     & 2+ of a rank   & Higher trips then
+higher pair \\ \hline
+Flush           & KT852 samesuit & 3+ samesuit & Highest unique
+flushcard \\ \hline
+\end{tabular}
 
 A quick word on ``any'' for the Board Requirements in the table. In
 Holdem you can ``play the board'', use the five community cards as
-your final poker hand. For a straight to be the best hand, not only
+your final poker hand. For a straight to be somebody's hand, not only
 must the board have at least three close cards, but the board can't
-itself be a flush or a full house or quads. For High Card to be the
-winning hand, the board must have no straights, flushes or even a pair
+itself be a flush or a full house or quads. For High Card to be
+someone's hand, the board must have no straights, flushes or even a pair
 on it.
 
 \section{Kickers}
